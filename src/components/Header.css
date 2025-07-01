@@ -1,0 +1,94 @@
+/* Specific styles for Header if needed, otherwise App.css handles general nav styles */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+/* Responsive adjustments for header */
+@media (max-width: 768px) {
+  nav > div:last-child { /* Targets the nav links container */
+    flex-direction: column;
+    width: 100%;
+    align-items: center; /* Center items on smaller screens */
+    margin-top: 15px;
+  }
+  nav a {
+    margin: 8px 0; /* Adjust vertical spacing for links */
+  }
+}
+
+/* Header styles */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #111;
+  color: #fff;
+  height: 70px;
+  padding: 0 32px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 32px;
+  top: 0;
+  bottom: 0;
+  height: 70px;
+}
+
+nav > div:last-child {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  font-size: 1.05rem;
+  padding: 8px 12px;
+  transition: color 0.2s;
+}
+nav a.active, nav a:hover {
+  color: #c8102e;
+}
+
+@media (max-width: 900px) {
+  nav > div:last-child {
+    gap: 10px;
+  }
+  .logo {
+    left: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    height: auto;
+    padding: 15px 0;
+  }
+  .logo {
+    position: static;
+    margin-bottom: 10px;
+    height: 48px;
+  }
+  nav > div:last-child {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  nav a {
+    margin: 8px 0;
+    font-size: 1rem;
+  }
+}
